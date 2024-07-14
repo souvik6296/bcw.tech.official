@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { NavLink } from "react-router-dom";
 
 
 export const Footer = () => {
@@ -39,9 +40,12 @@ export const Footer = () => {
                     </div>
 
                 </div>
-                <div id="copyright">
-                    © {new Date().getFullYear()} All rights reserved, Developer Gupta
-                </div>
+                <NavLink to={"/notf"}>
+
+                    <div id="copyright">
+                        © {new Date().getFullYear()} All rights reserved, Developer Gupta
+                    </div>
+                </NavLink>
             </footer>
 
         </>
