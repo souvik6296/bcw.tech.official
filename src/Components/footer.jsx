@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
 
+    const navigate = useNavigate();
     const navi = () =>{
-        const navigate = useNavigate();
         navigate("/notf");
     }
 
