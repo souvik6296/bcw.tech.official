@@ -124,27 +124,28 @@ export const Admin = ({setProgress}) => {
             buttonRef.current.style.backgroundColor = "#4fcbb0";
         }
     };
+    const checkAdminCookie = () => {
+        const adminName = Cookies.get('adminName');
+        if (adminName) {
+            // setElements();
+            console.log(adminName);
+            setElements(privilagePgae(adminName));
+            document.getElementById("green-alert").style.visibility = "visible";
+            document.getElementById("green-alert").innerText = `Successfully logged in Admin Panel. Welcome Mr. ${adminName} you are acting as an ADMIN now.`;
+
+            window.setTimeout(() => {
+                document.getElementById("green-alert").style.visibility = "hidden";
+
+            }, 5000);
+        } else {
+            // setElements(getLoginFormElement());
+            setElements(formPage());
+        }
+    };
 
     useEffect(() => {
 
-        const checkAdminCookie = () => {
-            const adminName = Cookies.get('adminName');
-            if (adminName) {
-                // setElements();
-                console.log(adminName);
-                setElements(privilagePgae(adminName));
-                document.getElementById("green-alert").style.visibility = "visible";
-                document.getElementById("green-alert").innerText = `Successfully logged in Admin Panel. Welcome Mr. ${adminName} you are acting as an ADMIN now.`;
 
-                window.setTimeout(() => {
-                    document.getElementById("green-alert").style.visibility = "hidden";
-
-                }, 5000);
-            } else {
-                // setElements(getLoginFormElement());
-                setElements(formPage());
-            }
-        };
 
         checkAdminCookie();
         setProgress(40);
