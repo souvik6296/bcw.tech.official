@@ -1,9 +1,14 @@
 import React from "react";
 import "./footer.css";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 export const Footer = () => {
+
+    const navi = () =>{
+        const navigate = useNavigate();
+        navigate("/notf");
+    }
 
     return (
         <>
@@ -40,12 +45,9 @@ export const Footer = () => {
                     </div>
 
                 </div>
-                <NavLink to={"/notf"}>
-
-                    <div id="copyright">
-                        © {new Date().getFullYear()} All rights reserved, Developer Gupta
-                    </div>
-                </NavLink>
+                <div id="copyright" onClick={navi}>
+                    © {new Date().getFullYear()} All rights reserved, Developer Gupta
+                </div>
             </footer>
 
         </>
