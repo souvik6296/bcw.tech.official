@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/admin/createplaylist" element={<CreatePlaylist setProgress = {setProgress}/>} />
         <Route path="/admin/selecteditvideo" element={<SelectEditVideo setProgress = {setProgress}/>} />
         <Route path="/admin/editvideo/:videoid" element={<EditVideo setProgress = {setProgress}/>} />
-        <Route path="/*" element={<NotFoundPage/>} />
+        <Route path="/undefined" element={<NotFoundPage/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
