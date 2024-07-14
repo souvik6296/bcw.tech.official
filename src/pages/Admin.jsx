@@ -152,7 +152,7 @@ export const Admin = ({setProgress}) => {
             setProgress(100);
         },2000);
 
-    }, [values]); // Include dependencies if needed
+    }, []); // Include dependencies if needed
 
     return (
         <main id="admin-main">
