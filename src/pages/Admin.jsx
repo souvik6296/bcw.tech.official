@@ -147,12 +147,16 @@ export const Admin = ({setProgress}) => {
         };
 
         checkAdminCookie();
+
+
+    }, [values]); // Include dependencies if needed
+
+    useEffect(()=>{
         setProgress(40);
         setTimeout(()=>{
             setProgress(100);
         },2000);
-
-    }, [values]); // Include dependencies if needed
+    },[]);
 
     return (
         <main id="admin-main">
