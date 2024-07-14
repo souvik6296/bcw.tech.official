@@ -5,10 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
 
-    const navigate = useNavigate();
-    const navi = () =>{
-        navigate("/notf");
-    }
 
     return (
         <>
@@ -45,7 +41,7 @@ export const Footer = () => {
                     </div>
 
                 </div>
-                <div id="copyright" onClick={navi}>
+                <div id="copyright">
                     © {new Date().getFullYear()} All rights reserved, Developer Gupta
                 </div>
             </footer>
