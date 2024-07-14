@@ -323,7 +323,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: rgb(46, 192, 255);
     border-radius: 5px;
-}
+} 
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
@@ -333,6 +333,9 @@ body::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 840px) {
     .row{
         --bs-gutter-x: 0.5rem !important;
+    }
+    .text-center #main-cont {
+        flex-direction: column !important;
     }
 
 }
