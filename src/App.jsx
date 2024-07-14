@@ -31,6 +31,7 @@ const App = () => {
         onLoaderFinished={() => setProgress(0)}
       />
       <Routes>
+
         <Route path="/" element={<Home setProgress = {setProgress} />} />
         <Route path="/videos" element={<Videos setProgress = {setProgress}/>} />
         <Route path="/playlists/allplaylists" element={<Playlists setProgress = {setProgress}/>} />
@@ -42,7 +43,7 @@ const App = () => {
         <Route path="/admin/createplaylist" element={<CreatePlaylist setProgress = {setProgress}/>} />
         <Route path="/admin/selecteditvideo" element={<SelectEditVideo setProgress = {setProgress}/>} />
         <Route path="/admin/editvideo/:videoid" element={<EditVideo setProgress = {setProgress}/>} />
-        <Route path="*" element={<NotFoundPage/>} />
+        <Route path="/notf" element={<NotFoundPage/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
