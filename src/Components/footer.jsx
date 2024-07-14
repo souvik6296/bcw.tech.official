@@ -40,7 +40,7 @@ export const Footer = () => {
 
                 </div>
                 <div id="copyright">
-                    &#169 All rights reserved, Developer Gupta
+                    © {new Date().getFullYear()} All rights reserved, Developer Gupta
                 </div>
             </footer>
 
