@@ -1,0 +1,101 @@
+#maincreate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#headingnew{
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: center !important;
+    /* width: 100%; */
+    /* margin: 0 !important; */
+    margin-top: 25px;
+}
+
+#cpform {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 25px;
+    background: rgba(42, 58, 58, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#cpform input[type="text"],
+#cpform input[type="color"],
+#cpform input[type="file"],
+#cpform input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+}
+
+#cpform input[type="color"] {
+    padding: 0;
+    height: 40px;
+    width: 45%;
+}
+
+#cpform input[type="submit"] {
+    background-color: #4fcbb0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cpform input[type="submit"]:hover {
+    background-color: #029272;
+}
+
+#colorvalue {
+    display: inline-block;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 4px;
+    font-size: 0.9em;
+    width: 45%;
+}
+
+
+#cpform input[type="file"]::file-selector-button {
+    padding: 5px 10px;
+    background-color: #4fcbb0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cpform input[type="file"]::file-selector-button:hover {
+    background-color: #029272;
+}
+
+#color-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}

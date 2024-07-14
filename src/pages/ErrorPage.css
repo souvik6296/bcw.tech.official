@@ -1,0 +1,61 @@
+#main-holder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lpart {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#a404 {
+    color: #2C6A8C;
+    font-size: 4.5em;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#des {
+    font-size: 1.8em;
+
+}
+
+#wait {
+    font-size: 1.5em;
+}
+
+#rpart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rpart img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 840px) {
+    #main-holder {
+        flex-direction: column-reverse;
+    }
+
+    #lpart,
+    #rpart {
+        width: 100%;
+
+    }
+
+    #lpart {
+        padding: 0 15px;
+    }
+
+
+
+}

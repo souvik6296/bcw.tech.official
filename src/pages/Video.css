@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    /* background-image: url("../images/pngtree-halloween-dark-night-silhouette-horror-background-image_387465.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+.card {
+    width: 20rem;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 #dcc6aa6f;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    font-weight: 100;
+}
+
+.card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.card-title {
+    text-align: start;
+}
+
+
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: rgb(46, 192, 255);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: rgb(46, 192, 255);
+}
+
+

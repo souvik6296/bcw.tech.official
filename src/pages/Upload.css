@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#uploadform {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    background: rgba(42, 58, 58, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#uploadform label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#uploadform input[type="text"],
+#uploadform textarea,
+#uploadform select,
+#uploadform input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+}
+
+.options{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    background: rgba(16, 19, 19, 0.904);
+}
+
+#uploadform input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4fcbb0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#uploadform input[type="submit"]:hover {
+    background-color: #029272;
+}
+
+#uploadform textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+#uploadform input[type="file"] {
+    padding: 5px;
+}
+
+
+#uploadform textarea::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+#uploadform textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+#uploadform textarea::-webkit-scrollbar-thumb {
+    background: #4fcbb0;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+#uploadform textarea::-webkit-scrollbar-thumb:hover {
+    background: #029272;
+}
+
+#uploadform input[type="file"]::file-selector-button {
+    padding: 5px 10px;
+    background-color: #4fcbb0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#uploadform input[type="file"]::file-selector-button:hover {
+    background-color: #029272;
+}

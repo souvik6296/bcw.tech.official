@@ -1,0 +1,71 @@
+#sevmain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#selectvideoform {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+    background: rgba(42, 58, 58, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.playoptions, .videooptions{
+    background-color: black !important;
+    color: white;
+    margin: 5px 0px;
+}
+
+#selectvideoform select option {
+    padding: 10px; /* This will add some padding inside the options */
+    margin: 5px 0; /* This will add margin between the options, if supported by the browser */
+}
+
+#selectvideoform label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+#selectvideoform select,
+#selectvideoform input[type="submit"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+}
+
+#selectvideoform select:focus,
+#selectvideoform input[type="submit"]:focus {
+    outline: none;
+    /* border-color: #007bff; */ 
+}
+
+#selectvideoform input[type="submit"] {
+    background-color: #4fcbb0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#selectvideoform input[type="submit"]:hover {
+    background-color: #029272;
+}
