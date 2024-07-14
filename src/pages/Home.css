@@ -286,6 +286,10 @@ main {
     margin-bottom: 15px;
 }
 
+.container{
+    max-width: 100% !important;
+}
+
 .btn1:hover {
     opacity: .95;
 }
@@ -326,6 +330,12 @@ body::-webkit-scrollbar-thumb:hover {
     background: rgb(46, 192, 255);
 }
 
+@media screen and (max-width: 840px) {
+    .row{
+        --bs-gutter-x: 0.5rem !important;
+    }
+
+}
 
 @media screen and (max-width: 480px) {
 
@@ -346,6 +356,8 @@ body::-webkit-scrollbar-thumb:hover {
     .card {
         margin: 25px 0;
     }
+
+
 
     @keyframes dotMove {
 
