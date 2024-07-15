@@ -85,7 +85,12 @@ function setItem() {
 
         document.getElementById('download').addEventListener('click', function () {
 
-            fetch(pdfUrl)
+            fetch(pdfUrl, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
                 .then(response => response.blob())
                 .then(blob => {
                     var url = window.URL.createObjectURL(blob);
