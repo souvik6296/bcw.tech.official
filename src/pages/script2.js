@@ -53,6 +53,7 @@ function setItem() {
                     Prism.highlightElement(codeBlock);
                     filename.innerText = "Lec" + index.toString() + ".py";
                     pdfUrl = data[videoid].notes;
+                    preview.href = pdfUrl;
 
 
                 })
@@ -68,12 +69,12 @@ function setItem() {
 
 
 
-        preview.addEventListener("click", () => {
+        // preview.addEventListener("click", () => {
 
-            preview.href = pdfUrl;
+        //     preview.href = pdfUrl;
 
 
-        })
+        // })
 
         var height1 = document.getElementById("left-part").style.height;
         var right = document.getElementById("right-part");
