@@ -52,7 +52,7 @@ function setItem() {
                     codeBlock.textContent = data[videoid].code.trim();
                     Prism.highlightElement(codeBlock);
                     filename.innerText = "Lec" + index.toString() + ".py";
-                    pdfUrl = data[videoid].notes;
+                    pdfUrl = data[videoid].note;
                     preview.href = pdfUrl;
 
 
