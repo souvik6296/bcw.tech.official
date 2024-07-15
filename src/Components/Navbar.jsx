@@ -14,6 +14,8 @@ export const Navbar = () => {
     const [elements, setElements] = useState([]);
     const fetchData = async () => {
 
+        console.log("Hii");
+
         const response = await fetch(`https://server-api-jade.vercel.app/admin/read/playlists`, {
             method: "GET",
             headers: {
