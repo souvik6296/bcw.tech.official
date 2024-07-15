@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
@@ -12,42 +12,49 @@ export const Navbar = () => {
     };
     
     const [elements, setElements] = useState([]);
-    const fetchData = async () => {
 
-        console.log("Hii");
 
-        const response = await fetch(`https://server-api-jade.vercel.app/admin/read/playlists`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
+    useEffect(()=>{
+
+        const fetchData = async () => {
+    
+            console.log("Hii");
+    
+            const response = await fetch(`https://server-api-jade.vercel.app/admin/read/playlists`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            });
+    
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
             }
-        });
-
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
+    
+            const result = await response.json();
+    
+            const data = await result.msg;
+    
+            const keys = Object.keys(data);
+            const length = keys.length;
+            const newElements = [];
+    
+            for (let i = length - 1; i >= 0; i--) {
+                var pid = "playlist" + i;
+                var na = data[pid].pname;
+                na = na.substring(0, na.indexOf("-")).replace("for LPU ", "");
+                newElements.push(
+                    <li key={i}><NavLink className="dropdown-item" to={`/playlists/selectdplatlist?name=${data[pid].pcode}&pname$${data[pid].pname}`} >{na}</NavLink></li>
+    
+                );
+            }
+            setElements(newElements);
         }
+    
+        fetchData();
+    },[]);
 
-        const result = await response.json();
 
-        const data = await result.msg;
-
-        const keys = Object.keys(data);
-        const length = keys.length;
-        const newElements = [];
-
-        for (let i = length - 1; i >= 0; i--) {
-            var pid = "playlist" + i;
-            var na = data[pid].pname;
-            na = na.substring(0, na.indexOf("-")).replace("for LPU ", "");
-            newElements.push(
-                <li key={i}><NavLink className="dropdown-item" to={`/playlists/selectdplatlist?name=${data[pid].pcode}&pname$${data[pid].pname}`} >{na}</NavLink></li>
-
-            );
-        }
-        setElements(newElements);
-    }
-
-    fetchData();
 
     
     return (
