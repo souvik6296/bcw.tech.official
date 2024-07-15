@@ -88,8 +88,8 @@ function setItem() {
             fetch(pdfUrl, { mode: 'no-cors' })
                 .then(response => response.blob())
                 .then(blob => {
-                    var url = window.URL.createObjectURL(blob);
-                    var link = document.createElement('a');
+                    const url = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
                     link.href = url;
                     link.download = 'lec' + index.toString() + '.pdf'; // Specify the file name
                     document.body.appendChild(link);
@@ -99,8 +99,9 @@ function setItem() {
                 })
                 .catch(err => {
                     console.error('Error:', err);
-                    alert("Resource file not yet prepeared or uploaded please try again later");
+                    alert("Resource file not yet prepared or uploaded. Please try again later.");
                 });
+
 
         });
 
