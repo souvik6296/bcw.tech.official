@@ -49,6 +49,8 @@ export const Upload = ({setProgress}) => {
 
     useState(()=>{
         const fetchData = async () => {
+
+            console.log("Hello");
             
             const response = await fetch(`https://server-api-jade.vercel.app/admin/read/playlists`, {
                 method: "GET",
