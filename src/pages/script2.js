@@ -44,8 +44,9 @@ function setItem() {
                     const iframe = document.getElementById("iframe");
                     const codeBlock = document.getElementById('code-block');
                     const filename = document.getElementById("filename");
+                    const download = document.getElementById('download');
 
-                    console.log(videoid);
+                    // console.log(videoid);
                     titletext.innerText = data[videoid].title;
                     desctext.innerText = data[videoid].desc;
                     iframe.src = data[videoid].videourl;
@@ -54,6 +55,8 @@ function setItem() {
                     filename.innerText = "Lec" + index.toString() + ".py";
                     pdfUrl = data[videoid].note;
                     preview.href = pdfUrl;
+                    download.href = pdfUrl;
+                    download.download = 'lec' + index.toString() + '.pdf';
 
 
                 })
@@ -80,26 +83,26 @@ function setItem() {
         var right = document.getElementById("right-part");
         right.style.height = height1;
 
-        document.getElementById('download').addEventListener('click', function () {
+        // document.getElementById('download').addEventListener('click', function () {
 
-            fetch(pdfUrl)
-                .then(response => response.blob())
-                .then(blob => {
-                    var url = window.URL.createObjectURL(blob);
-                    var link = document.createElement('a');
-                    link.href = url;
-                    link.download = 'lec' + index.toString() + '.pdf'; // Specify the file name
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    window.URL.revokeObjectURL(url);
-                })
-                .catch(err => {
-                    console.error('Error:', err);
-                    alert("Resource file not yet prepeared or uploaded please try again later");
-                });
+        //     fetch(pdfUrl)
+        //         .then(response => response.blob())
+        //         .then(blob => {
+        //             var url = window.URL.createObjectURL(blob);
+        //             var link = document.createElement('a');
+        //             link.href = url;
+        //             link.download = 'lec' + index.toString() + '.pdf'; // Specify the file name
+        //             document.body.appendChild(link);
+        //             link.click();
+        //             document.body.removeChild(link);
+        //             window.URL.revokeObjectURL(url);
+        //         })
+        //         .catch(err => {
+        //             console.error('Error:', err);
+        //             alert("Resource file not yet prepeared or uploaded please try again later");
+        //         });
 
-        });
+        // });
 
         // Fetch the JSON file
 
