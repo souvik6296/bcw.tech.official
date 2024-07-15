@@ -117,9 +117,9 @@ export const EditVideo = ({setProgress}) => {
 
 
             const form2 = new FormData();
-            form2.append('image', mainFile.noteuri);
+            form2.append('pdf', mainFile.noteuri);
             try {
-                const response2 = await fetch(`https://server-api-jade.vercel.app/admin/upload/img`, {
+                const response2 = await fetch(`https://server-api-jade.vercel.app/admin/upload/pdf`, {
                     method: "POST",
                     body: form2
                 });
