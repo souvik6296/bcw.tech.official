@@ -85,7 +85,7 @@ function setItem() {
 
         document.getElementById('download').addEventListener('click', function () {
 
-            fetch(pdfUrl, { mode: 'no-cors' })
+            fetch(`https://server-api-jade.vercel.app/proxy?url=${encodeURIComponent(pdfUrl)}`)
                 .then(response => response.blob())
                 .then(blob => {
                     const url = window.URL.createObjectURL(blob);
