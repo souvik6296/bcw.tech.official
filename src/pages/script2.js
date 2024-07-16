@@ -85,7 +85,7 @@ function setItem() {
 
         document.getElementById('download').addEventListener('click', function () {
 
-            fetch(`https://server-api-jade.vercel.app/proxy?url=${encodeURIComponent(pdfUrl)}`)
+            fetch(pdfUrl)
                 .then(response => response.blob())
                 .then(blob => {
                     const url = window.URL.createObjectURL(blob);
